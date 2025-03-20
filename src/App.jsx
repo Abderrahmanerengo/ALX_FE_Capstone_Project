@@ -7,21 +7,22 @@ function App() {
   const [weather, setWeather] = useState(null);
   const[loading, setLoading] = useState (false);
   const[error, setError] =useState("") ;
-  const API_KEY = import.meta.env.VITE_API_KEY;
-  const API_URL = `api.openweathermap.org/data/2.5/forecast?lat=44.34&lon=10.99&appid={API key}`;
-  const fetchWeather = async (city)=> {
+  const API_KEY = '50125c23cc02daf927baf57603776551';
+  const API_URL = `https://api.openweathermap.org/data/2.5/weather`;
+
+  const fetchWeather = async (city) => {
     setLoading(true);
-    setError('');
-    try{
-      const url = `${API_URL}?q=${city}& units=metric&appid=${API_KEY}`;
+    setError("");
+    try {
+      const url = `${API_URL}?q=${city}&units=metric&appid=${API_KEY}`;
       const response = await axios.get(url);
       console.log(response.data);
       setWeather(response.data);
-    } catch (err){ 
-      if (err.response && error.response.status === 404){
-        setError('city not found. please try again')
-      }else{
-        setError('there is a problem. please try again later.');
+    } catch (err) {
+      if (err.response && err.response.status === 404) {
+        setError("City not found. Please try again.");
+      } else {
+        setError("An error occurred. Please try again later.");
       }
       setWeather(null);
     }
@@ -33,7 +34,7 @@ function App() {
       <h1 className='text-3xl 
       font-bold text-center mb-6 '>Weather App</h1>
       <SearchBar fetchWeather =
-      {fetchWeather}/>
+       {fetchWeather}/>
       </div>
     </div>
   )
