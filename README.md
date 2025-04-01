@@ -1,12 +1,77 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Weather Dashboard Project
 
-Currently, two official plugins are available:
+## Description
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+A responsive weather dashboard that allows users to search for current weather conditions in various cities using a public weather API. The dashboard dynamically updates to display key weather details, making it easy for users to access real-time weather information.
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- User-friendly search bar for city lookup.
+- Displays current weather conditions, including:
+  - Temperature
+  - Humidity
+  - Wind Speed
+  - Weather Icon
+- Dynamic UI updates based on API responses.
+- Mobile-first responsive design using Tailwind CSS.
+- Error handling for invalid city inputs.
+
+## Technology Stack
+
+- **Frontend:** HTML, JavaScript, Tailwind CSS
+- **API:** OpenWeatherMap
+- **Deployment:** GitHub Pages
+
+## Installation
+
+Follow these steps to set up and run the project locally:
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/Abderrahmanerengo/ALX_FE_Capstone_Project.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd weather-dashboard
+   ```
+
+3. Open `index.html` in a browser or use a local server to view the app.
+
+## API Setup
+
+To use the OpenWeatherMap API, follow these steps:
+
+1. Sign up at [OpenWeatherMap](https://openweathermap.org/) and get an API key.
+2. Create a `.env` file in the root directory (if applicable) and store the API key:
+
+   ```bash
+   REACT_APP_OPENWEATHER_API_KEY="your-api-key-here"
+   ```
+
+3. Ensure the API key is correctly referenced in your JavaScript code.
+
+## Deployment
+
+The application can be deployed using GitHub Pages:
+
+1. Push the project to GitHub.
+2. In the repository settings, enable GitHub Pages by selecting the branch and root folder.
+3. Access the deployed app at `https://Abderrahmanerengo.github.io/ALX_FE_Capstone_Project/`.
+
+## Contributing
+
+Contributions are welcome! To contribute:
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/your-feature-name`).
+3. Make your changes.
+4. Commit your changes (`git commit -m 'Add your feature'`).
+5. Push to your forked repo (`git push origin feature/your-feature-name`).
+6. Open a pull request!
+
+
+
